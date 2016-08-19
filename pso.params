@@ -1,16 +1,16 @@
-loc_x_low       = 0.25
-loc_x_high      = 0.25
-loc_y_low       = 0.25
-loc_y_high      = 0.25
+loc_x_low       = 1
+loc_x_high      = 4
+loc_y_low       = -1
+loc_y_high      = 1
 
 state = ec.simple.SimpleEvolutionState
-init = ec.pso.ECJInitializer
+init = pso.ECJInitializer
 finish = ec.simple.SimpleFinisher
 exch = ec.simple.SimpleExchanger
 breed = ec.pso.PSOBreeder
 eval = ec.simple.SimpleEvaluator
 
-stat = ec.pso.SimpleStatistics
+stat = ec.simple.SimpleStatistics
 stat.file = out.stat
 stat.do-time = true
 stat.do-final = true
@@ -44,12 +44,12 @@ pop.subpop.0.species.mutation-type = gauss
 pop.subpop.0.species.crossover-type = one
 
 # Here you specify your individual in the usual way
-#pop.subpop.0.species.genome-size = 2
+pop.subpop.0.species.genome-size = 2
 pop.subpop.0.species.min-gene = 0.0
 pop.subpop.0.species.max-gene = 1.0
 
 # Problem
-eval.problem = ec.pso.ECJPSO
+eval.problem = pso.ECJPSO
 
 # PSO parameters
 # Inertia weight (w)
