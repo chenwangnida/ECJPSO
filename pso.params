@@ -10,7 +10,7 @@ exch = ec.simple.SimpleExchanger
 breed = ec.pso.PSOBreeder
 eval = ec.simple.SimpleEvaluator
 
-stat = ec.pso.GraphStatistics
+stat = ec.pso.SimpleStatistics
 stat.file = out.stat
 stat.do-time = true
 stat.do-final = true
